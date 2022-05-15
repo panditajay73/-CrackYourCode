@@ -1,0 +1,40 @@
+"""
+This is for simple array type questions but this is not working with this question because it is a pointer type of question
+
+list1 = []
+num  = int(input())
+
+for i in range (0,num):
+    ele = int(input())
+    list1.append(ele)
+new = []    
+for a in list1:
+
+    n = list1.count(a)
+
+    if n > 1:
+ 
+        if new.count(a) == 0:  # condition to check
+ 
+            new.append(a)
+ 
+print(new)
+ so use below code for submission
+"""
+
+class Solution :
+    def findDuplicate(self,n:List[int]) -> int:
+        slower1 ,faster = 0,0
+        while True:
+            slower1 = n[slower1]
+            faster = n[n[faster]]
+            if slower1 == faster:
+                break
+        
+        
+        slower2=0
+        while True:
+            slower1 = n[slower1]
+            slower2 = n[slower2]
+            if slower1 == slower2:
+                return slower1
