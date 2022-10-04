@@ -1,3 +1,4 @@
+//program for checking largest and smallest among three numbers
 import java.util.*;
 public class SmallestAndLargest {
 
